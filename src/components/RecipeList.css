@@ -2,12 +2,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px 40px;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 40px auto;
 }
 .recipe-list .card {
   background: white;
-  color: gray;
+  color: darkgray;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
@@ -18,26 +18,28 @@
   transform: rotate(2deg);
 }
 .recipe-list .card h3 {
-  color: darkgray;
+  color: dimgray;
   margin-bottom: 6px;
 }
 .recipe-list .card p {
-  color: lightgray;
+  color: gray;
   font-size: 0.9em;
 }
 .recipe-list .card div {
-  color: darkgray;
+  color: dimgray;
   font-size: 0.7em;
   margin: 20px 0;
   line-height: 1.5em;
 }
 .recipe-list .card a {
-  color: darkgrey;
+  color: dimgray;
   text-decoration: none;
   display: block;
+  position: relative;
+  float: none;
   background: whitesmoke;
   font-size: 0.9em;
-  width: 100px;
   text-align: center;
-  width: 120px;
+  padding: 8px;
+  border-radius: 4px;
 }
