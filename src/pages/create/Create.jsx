@@ -13,6 +13,19 @@ export default function Create() {
     console.log(title, method, cookingTime);
   };
 
+  const handleAdd = (e) => {
+    e.preventDefault();
+    const trimmedIngredient = newIngredient.trim();
+
+    if (trimmedIngredient && !ingredients.includes(trimmedIngredient)) {
+      setIngredients((prevIngredients) => [
+        ...prevIngredients,
+        trimmedIngredient,
+      ]);
+    }
+    setNewIngredient("");
+  };
+
   return (
     <div className="create">
       <h2 className="page-title">Add a New Recipe</h2>
@@ -31,7 +44,11 @@ export default function Create() {
         <label>
           <span>Recipe ingredients:</span>
           <div>
-            <input type="text" />
+            <input
+              type="text"
+              onChange={(e) => setNewIngredient(e.target.value)}
+              value={newIngredient}
+            />
             <button className="btn">Add</button>
           </div>
         </label>
@@ -54,7 +71,9 @@ export default function Create() {
             required
           />
         </label>
-        <button className="btn">Submit</button>
+        <button className="btn" onClick={handleAdd}>
+          Submit
+        </button>
       </form>
     </div>
   );
