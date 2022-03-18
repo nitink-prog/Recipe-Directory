@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./Create.css";
 
 export default function Create() {
@@ -7,10 +7,11 @@ export default function Create() {
   const [cookingTime, setCookingTime] = useState("");
   const [newIngredient, setNewIngredient] = useState("");
   const [ingredients, setIngredients] = useState([]);
+  const ingredientInput = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(title, method, cookingTime);
+    console.log(title, method, cookingTime, ingredients);
   };
 
   const handleAdd = (e) => {
@@ -24,6 +25,7 @@ export default function Create() {
       ]);
     }
     setNewIngredient("");
+    ingredientInput.current.focus();
   };
 
   return (
@@ -43,15 +45,24 @@ export default function Create() {
 
         <label>
           <span>Recipe ingredients:</span>
-          <div>
+          <div className="ingredients">
             <input
               type="text"
               onChange={(e) => setNewIngredient(e.target.value)}
               value={newIngredient}
+              ref={ingredientInput}
             />
-            <button className="btn">Add</button>
+            <button onClick={handleAdd} className="btn">
+              Add
+            </button>
           </div>
         </label>
+        <p>
+          Added:{" "}
+          {ingredients.map((i) => (
+            <em key={i}>{i}, </em>
+          ))}
+        </p>
 
         <label>
           <span>Recipe method:</span>
@@ -71,7 +82,7 @@ export default function Create() {
             required
           />
         </label>
-        <button className="btn" onClick={handleAdd}>
+        <button className="btn" onClick={handleSubmit}>
           Submit
         </button>
       </form>
