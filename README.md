@@ -2,8 +2,6 @@
 
 An intermediate level React app that displays a list of recipes pulled from a JSON-Server. Combines many React practices into a realistic webapp.
 
----
-
 ## Studies
 
 ### React Hooks
@@ -34,8 +32,6 @@ An intermediate level React app that displays a list of recipes pulled from a JS
   - `<Navbar />` is always rendered, with components rendered underneath depending on current route.
   - `<Recipe />` component is reusable.
 - Passing children templates.
-
----
 
 ## Outline
 
