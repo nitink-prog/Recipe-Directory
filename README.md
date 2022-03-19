@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Recipe Directory
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An intermediate level React app that displays a list of recipes pulled from a JSON-Server. Combines many React practices into a realistic webapp.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Studies
 
-### `npm start`
+### React Hooks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- useState
+- useEffect
+- useRef
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Custom React Hooks
 
-### `npm test`
+- useFetch - general-purpose hook for GETting and POSTing data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### React Router Hooks
 
-### `npm run build`
+- useParams
+- useHistory
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### APIs and JSON
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Used _json-server_ node package to locally host an API created from `./data/db.json`.
+- Handling returned data safely with Loading state and Error handling.
+- Mapping data for visually appealing table display.
+- Dropdown menu for displaying data based on particular building.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Component Tree
 
-### `npm run eject`
+- Separation of pages and components.
+  - `<Navbar />` is always rendered, with components rendered underneath depending on current route.
+  - `<Recipe />` component is reusable.
+- Passing children templates.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Outline
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+.
+├── README.md
+├── package-lock.json
+├── package.json
+├── data
+│   └── db.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+└── src
+    ├── App.css
+    ├── App.js
+    ├── components
+    │   ├── Navbar.css
+    │   ├── Navbar.jsx
+    │   ├── RecipeList.css
+    │   └── RecipeList.jsx
+    ├── hooks
+    │   └── useFetch.jsx
+    ├── index.css
+    ├── index.js
+    └── pages
+        ├── create
+        │   ├── Create.css
+        │   └── Create.jsx
+        ├── home
+        │   ├── Home.css
+        │   └── Home.jsx
+        ├── recipe
+        │   ├── Recipe.css
+        │   └── Recipe.jsx
+        └── search
+            ├── Search.css
+            └── Search.jsx
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
