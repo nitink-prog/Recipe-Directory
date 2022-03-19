@@ -74,5 +74,4 @@ An intermediate level React app that displays a list of recipes pulled from a JS
         └── search
             ├── Search.css
             └── Search.jsx
-
 ```
