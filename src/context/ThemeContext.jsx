@@ -13,13 +13,15 @@ const themeReducer = (state, action) => {
 };
 
 export function ThemeProvider({ children }) {
-  const [state, dispatch] = useReducer(themeReducer, { color: "blue" });
+  const [state, dispatch] = useReducer(themeReducer, {
+    color: "rebeccapurple",
+  });
 
   const changeColor = (color) => {
     dispatch({ type: "CHANGE_COLOR", payload: color });
   };
   return (
-    <ThemeContext.Provider value={{ color: "lig htblue" }}>
+    <ThemeContext.Provider value={{ ...state, changeColor }}>
       {children}
     </ThemeContext.Provider>
   );

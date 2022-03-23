@@ -3,6 +3,7 @@ import { useTheme } from "../hooks/useTheme";
 import Searchbar from "./Searchbar";
 
 import "./Navbar.css";
+import ThemeSelector from "./ThemeSelector";
 
 export default function Navbar() {
   const { color } = useTheme();
