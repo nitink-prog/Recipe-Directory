@@ -3,5 +3,13 @@
   align-items: center;
 }
 .searchbar input {
+  transition: all 0.3s ease-in;
   margin-left: 10px;
+}
+
+/* dark mode */
+.searchbar.dark input {
+  background: #111;
+  border-color: rgb(185, 185, 185);
+  color: rgb(185, 185, 185);
 }
