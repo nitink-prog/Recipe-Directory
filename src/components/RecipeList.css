@@ -18,11 +18,11 @@
   transform: rotate(2deg);
 }
 .recipe-list .card h3 {
-  color: dimgray;
+  color: #222;
   margin-bottom: 6px;
 }
 .recipe-list .card p {
-  color: gray;
+  color: dimgray;
   font-size: 0.9em;
 }
 .recipe-list .card div {
@@ -42,4 +42,18 @@
   text-align: center;
   padding: 8px;
   border-radius: 4px;
+}
+
+/* dark mode */
+.recipe-list .card.dark {
+  background: #222;
+}
+.recipe-list .card.dark h3 {
+  color: #e4e4e4;
+}
+.recipe-list .card.dark p {
+  color: rgb(185, 185, 185);
+}
+.recipe-list .card.dark div {
+  color: rgb(185, 185, 185);
 }

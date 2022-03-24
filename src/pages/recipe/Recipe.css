@@ -3,8 +3,15 @@
   margin: 40px auto;
   text-align: center;
   background: white;
+  color: #222;
   padding: 40px;
   box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.recipe p {
+  color: dimgray;
 }
 .recipe ul {
   display: flex;
@@ -15,7 +22,7 @@
 .recipe li {
   list-style-type: none;
   margin-right: 10px;
-  color: darkgray;
+  color: dimgray;
 }
 .recipe li::after {
   content: ",";
@@ -26,4 +33,15 @@
 .method {
   text-align: left;
   line-height: 1.5em;
+}
+/* dark mode */
+.recipe.dark {
+  background: #222;
+  color: #e4e4e4;
+}
+.recipe.dark p {
+  color: rgb(185, 185, 185);
+}
+.recipe.dark li {
+  color: rgb(185, 185, 185);
 }
