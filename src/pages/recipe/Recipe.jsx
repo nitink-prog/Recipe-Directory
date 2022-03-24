@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { useTheme } from "../../hooks/useTheme";
+import hoursHelper from "../../utils/hoursHelper";
 import "./Recipe.css";
 
 export default function Recipe() {
@@ -20,7 +21,7 @@ export default function Recipe() {
       {recipe && (
         <>
           <h2 className="page-title">{recipe.title}</h2>
-          <p>Takes {recipe.cookingTime} to cook.</p>
+          <p>Takes {hoursHelper(recipe.cookingTime)} to cook.</p>
           <ul>
             {recipe.ingredients.map((ingredient) => (
               <li key={ingredient}>{ingredient}</li>
