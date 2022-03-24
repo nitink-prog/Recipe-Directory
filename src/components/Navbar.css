@@ -27,3 +27,10 @@
   background: white;
   color: dimgray;
 }
+
+.navbar.dark {
+  color: #111;
+}
+.navbar.dark a.brand {
+  color: #111;
+}
