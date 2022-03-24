@@ -57,3 +57,7 @@
 .recipe-list .card.dark div {
   color: rgb(185, 185, 185);
 }
+.recipe-list .card.dark a {
+  color: rgb(185, 185, 185);
+  background: #333;
+}
