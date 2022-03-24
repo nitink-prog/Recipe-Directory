@@ -9,7 +9,7 @@
 
 /* dark mode */
 .searchbar.dark input {
-  background: #111;
-  border-color: rgb(185, 185, 185);
+  background: #333;
+  border-color: #222;
   color: rgb(185, 185, 185);
 }
