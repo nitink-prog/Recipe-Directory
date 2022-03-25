@@ -1,5 +1,6 @@
 .create {
-  color: dimgray;
+  transition: all 0.3s ease-in;
+  color: #222;
   max-width: 480px;
   margin: 60px auto;
 }
@@ -12,13 +13,13 @@
   font-size: 0.8em;
 }
 .create button {
+  transition: all 0.3s ease-in;
   display: block;
   font-size: 1em;
   color: white;
   padding: 8px 20px;
   border: 0;
   border-radius: 4px;
-  background-color: rebeccapurple;
   cursor: pointer;
   text-decoration: none;
   margin: 20px auto;
@@ -30,4 +31,11 @@
 }
 .ingredients button {
   margin: 0 0 0 10px;
+}
+
+.create.dark {
+  color: #e4e4e4;
+}
+.create.dark button {
+  color: #111;
 }
