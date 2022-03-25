@@ -6,7 +6,7 @@ import "./Create.css";
 export default function Create() {
   const [title, setTitle] = useState("");
   const [method, setMethod] = useState("");
-  const [cookingTime, setCookingTime] = useState();
+  const [cookingTime, setCookingTime] = useState(0);
   const [newIngredient, setNewIngredient] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const ingredientInput = useRef(null);
