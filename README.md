@@ -1,6 +1,6 @@
 # Recipe Directory
 
-An intermediate level React app that displays a list of recipes pulled from a JSON-Server. Combines many React practices into a realistic webapp.
+An intermediate level React app that displays a list of recipes pulled from a Firebase Firestore database. Combines many React practices into a realistic webapp.
 
 ## Studies
 
@@ -19,12 +19,17 @@ An intermediate level React app that displays a list of recipes pulled from a JS
 - useParams
 - useHistory
 
-### APIs and JSON
+### APIs
 
-- Used _json-server_ node package to locally host an API created from `./data/db.json`.
 - Handling returned data safely with Loading state and Error handling.
 - Mapping data for visually appealing table display.
 - Dropdown menu for displaying data based on particular building.
+
+### Firebase Firestore Database
+
+- Connection to cloud stored backend database
+- Efficient configuration of database
+- Pulling live data and handling errors
 
 ### Component Tree
 
