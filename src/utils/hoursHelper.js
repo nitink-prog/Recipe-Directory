@@ -1,3 +1,6 @@
+//simple helper function to return int minutes in human readable string
+//example: minutes = 75 returns "1 hour and 15 minutes"
+
 export default function hoursHelper(minutes) {
   if (minutes > 60) {
     let hours = Math.floor(minutes / 60);
