@@ -1,4 +1,4 @@
-# Recipe Directory
+# Recipe Directory - Firebase Version
 
 An intermediate level React app that displays a list of recipes pulled from a Firebase Firestore database. Combines many React practices into a realistic webapp.
 
