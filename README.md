@@ -27,15 +27,16 @@ An intermediate level React app that displays a list of recipes pulled from a Fi
 
 ### Firebase Firestore Database
 
-- Connection to cloud stored backend database
-- Efficient configuration of database
-- Pulling live data and handling errors
+- Connection to cloud stored backend database.
+- Efficient configuration of database.
+- Pulling real-time data and handling errors.
+  - Changes to any recipe are instantly reflected in the Home page and the Recipe page.
 
 ### Component Tree
 
 - Separation of pages and components.
   - `<Navbar />` is always rendered, with components rendered underneath depending on current route.
-  - `<Recipe />` component is reusable.
+  - `<Recipe />` component is reused.
 - Passing children templates.
 
 ## Outline
@@ -45,8 +46,6 @@ An intermediate level React app that displays a list of recipes pulled from a Fi
 ├── README.md
 ├── package-lock.json
 ├── package.json
-├── data
-│   └── db.json
 ├── public
 │   ├── favicon.ico
 │   ├── index.html
@@ -57,15 +56,27 @@ An intermediate level React app that displays a list of recipes pulled from a Fi
 └── src
     ├── App.css
     ├── App.js
+    ├── index.css
+    ├── index.js
+    ├── assets
+    │   ├── darkmode-icon.svg
+    │   └── delete-icon.svg
     ├── components
     │   ├── Navbar.css
     │   ├── Navbar.jsx
     │   ├── RecipeList.css
-    │   └── RecipeList.jsx
+    │   ├── RecipeList.jsx
+    │   ├── Searchbar.css
+    │   ├── Searchbar.jsx
+    │   ├── ThemeSelector.css
+    │   └── ThemeSelector.jsx
+    ├── context
+    │   └── ThemeContext.jsx
+    ├── firebase
+    │   └── config.jsx
     ├── hooks
-    │   └── useFetch.jsx
-    ├── index.css
-    ├── index.js
+    │   ├── useFetch.jsx
+    │   └── useTheme.jsx
     └── pages
         ├── create
         │   ├── Create.css
