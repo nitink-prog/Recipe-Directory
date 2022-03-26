@@ -10,10 +10,8 @@ export default function Home() {
 
   useEffect(() => {
     setIsPending(true);
-    projectFirestore
-      .collection("recipes")
-      .get()
-      .then((snapshot) => {
+    const unSubscribe = projectFirestore.collection("recipes").onSnapshot(
+      (snapshot) => {
         if (snapshot.empty) {
           setIsPending(false);
           setError("No recipes found!");
@@ -25,11 +23,15 @@ export default function Home() {
           setRecipes(results);
           setIsPending(false);
         }
-      })
-      .catch((err) => {
+      },
+      (err) => {
         setError(err.message);
         setIsPending(false);
-      });
+      }
+    );
+    // Clean-up function: unsubscribe from the listener above when <Home /> unmounts
+    // prevents this useEffect from running when we're on a different page
+    return () => unSubscribe();
   }, []);
 
   return (
