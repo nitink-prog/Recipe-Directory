@@ -30,6 +30,12 @@ export default function Recipe() {
       });
   }, [id]);
 
+  const handleClickUpdate = () => {
+    projectFirestore.collection("recipes").doc(id).update({
+      title: "Changed title",
+    });
+  };
+
   return (
     <div className={`recipe ${mode}`}>
       {error && <p className="error">{error}</p>}
@@ -45,6 +51,7 @@ export default function Recipe() {
             ))}
           </ul>
           <p className="method">{recipe.method}</p>
+          <button onClick={handleClickUpdate}>Update</button>
         </>
       )}
     </div>
