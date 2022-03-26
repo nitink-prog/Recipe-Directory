@@ -15,7 +15,7 @@ export default function Recipe() {
 
   useEffect(() => {
     setIsPending(true);
-    projectFirestore
+    const unSubscribe = projectFirestore
       .collection("recipes")
       .doc(id)
       .onSnapshot((doc) => {
@@ -27,6 +27,9 @@ export default function Recipe() {
           setError("Could not find that recipe.");
         }
       });
+    // Clean-up function: unsubscribe from the listener above when <Recipe /> unmounts
+    // prevents this useEffect from running when we're on a different page
+    return () => unSubscribe();
   }, [id]);
 
   const handleClickUpdate = () => {
