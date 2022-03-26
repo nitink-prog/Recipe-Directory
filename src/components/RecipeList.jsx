@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTheme } from "../hooks/useTheme";
 import hoursHelper from "../utils/hoursHelper";
+import deleteIcon from "../assets/delete-icon.svg"
 import "./RecipeList.css";
 
 export default function RecipeList({ recipes }) {
