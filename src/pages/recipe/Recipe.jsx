@@ -18,8 +18,7 @@ export default function Recipe() {
     projectFirestore
       .collection("recipes")
       .doc(id)
-      .get()
-      .then((doc) => {
+      .onSnapshot((doc) => {
         if (doc.exists) {
           setRecipe(doc.data());
           setIsPending(false);
