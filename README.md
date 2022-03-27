@@ -39,6 +39,10 @@ An intermediate level React app that displays a list of recipes pulled from a Fi
   - `<Recipe />` component is reused.
 - Passing children templates.
 
+## Upcoming Features
+
+- Form for updating document (recipe) data
+
 ## Outline
 
 ```
