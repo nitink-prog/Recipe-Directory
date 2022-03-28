@@ -8,8 +8,6 @@ export default function wordCap(sentence) {
   words.forEach((word) => {
     result.push(word[0].toUpperCase() + word.substring(1));
   });
-  // turn array back into a string
-
-  console.log(result.join(" "));
+  // turn array back into a string within the return
   return result.join(" ");
 }
