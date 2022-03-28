@@ -1,6 +1,6 @@
 # Recipe Directory - Firebase Version
 
-An intermediate level React app that displays a list of recipes pulled from a Firebase Firestore database. Combines many React practices into a realistic webapp.
+A React app that displays a list of recipes pulled from a Firebase Firestore database. Combines many React practices into a realistic webapp.
 
 ## Studies
 
@@ -10,20 +10,10 @@ An intermediate level React app that displays a list of recipes pulled from a Fi
 - useEffect
 - useRef
 
-### Custom React Hooks
-
-- useFetch - general-purpose hook for GETting and POSTing data
-
 ### React Router Hooks
 
 - useParams
 - useHistory
-
-### APIs
-
-- Handling returned data safely with Loading state and Error handling.
-- Mapping data for visually appealing table display.
-- Dropdown menu for displaying data based on particular building.
 
 ### Firebase Firestore Database
 
@@ -31,6 +21,13 @@ An intermediate level React app that displays a list of recipes pulled from a Fi
 - Efficient configuration of database.
 - Pulling real-time data and handling errors.
   - Changes to any recipe are instantly reflected in the Home page and the Recipe page.
+- Search for recipes in the directory.
+
+### APIs
+
+- Handling returned data safely with Loading state and Error handling.
+- Mapping data for visually appealing table display.
+- Dropdown menu for displaying data based on particular building.
 
 ### Component Tree
 
