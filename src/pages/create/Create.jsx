@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { db } from "../../firebase/config";
 import { useTheme } from "../../hooks/useTheme";
