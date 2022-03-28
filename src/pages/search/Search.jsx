@@ -17,7 +17,6 @@ export default function Search() {
   const trimString = queryString.search.substring(3);
   const searchQuery = trimString.replace("%20", " ");
 
-  // create query object for Firestore
   useEffect(() => {
     setIsPending(true);
     const q = db
@@ -36,6 +35,9 @@ export default function Search() {
         setIsPending(false);
         setError(err);
       });
+    return () => {
+      setRecipes(null);
+    };
   }, [searchQuery]);
 
   return (
