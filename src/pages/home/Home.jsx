@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import RecipeList from "../../components/RecipeList";
 import { db } from "../../firebase/config";
 import "./Home.css";
