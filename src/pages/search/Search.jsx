@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import RecipeList from "../../components/RecipeList";
-import { projectFirestore } from "../../firebase/config";
+import { db } from "../../firebase/config";
 import "./Search.css";
 
 export default function Search() {
@@ -9,7 +9,7 @@ export default function Search() {
   const searchQuery = queryString.search.substring(3);
   
   // create query object for Firestore
-  const q = projectFirestore
+  const q = db
     .collection("recipes")
     .where("title", "in", searchQuery);
   // get the data

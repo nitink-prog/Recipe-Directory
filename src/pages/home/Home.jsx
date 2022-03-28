@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import RecipeList from "../../components/RecipeList";
-import { projectFirestore } from "../../firebase/config";
+import { db } from "../../firebase/config";
 import "./Home.css";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     setIsPending(true);
-    const unSubscribe = projectFirestore.collection("recipes").onSnapshot(
+    const unSubscribe = db.collection("recipes").onSnapshot(
       (snapshot) => {
         if (snapshot.empty) {
           setIsPending(false);

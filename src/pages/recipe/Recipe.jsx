@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { projectFirestore } from "../../firebase/config";
+import { db } from "../../firebase/config";
 import { useTheme } from "../../hooks/useTheme";
 import hoursHelper from "../../utils/hoursHelper";
 import "./Recipe.css";
@@ -15,7 +15,7 @@ export default function Recipe() {
 
   useEffect(() => {
     setIsPending(true);
-    const unSubscribe = projectFirestore
+    const unSubscribe = db
       .collection("recipes")
       .doc(id)
       .onSnapshot((doc) => {
@@ -33,7 +33,7 @@ export default function Recipe() {
   }, [id]);
 
   const handleClickUpdate = () => {
-    projectFirestore.collection("recipes").doc(id).update({
+    db.collection("recipes").doc(id).update({
       title: "Changed title",
     });
   };

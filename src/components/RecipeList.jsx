@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTheme } from "../hooks/useTheme";
-import { projectFirestore } from "../firebase/config";
+import { db } from "../firebase/config";
 import hoursHelper from "../utils/hoursHelper";
 import deleteIcon from "../assets/delete-icon.svg";
 import "./RecipeList.css";
@@ -13,7 +13,7 @@ export default function RecipeList({ recipes }) {
   }
 
   const handleClickDelete = (id) => {
-    projectFirestore.collection("recipes").doc(id).delete();
+    db.collection("recipes").doc(id).delete();
   };
 
   return (

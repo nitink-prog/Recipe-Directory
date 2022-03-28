@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { projectFirestore } from "../../firebase/config";
+import { db } from "../../firebase/config";
 import { useTheme } from "../../hooks/useTheme";
 import "./Create.css";
 
@@ -24,7 +24,7 @@ export default function Create() {
       cookingTime,
     };
     try {
-      await projectFirestore.collection("recipes").add(recipe);
+      await db.collection("recipes").add(recipe);
       history.push("/");
     } catch (err) {
       console.log(err);
