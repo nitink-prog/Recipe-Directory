@@ -7,14 +7,20 @@ export default function Search() {
   // get searchQuery out of the URL
   const queryString = useLocation();
   const searchQuery = queryString.search.substring(3);
-  
+
   // create query object for Firestore
   const q = db
     .collection("recipes")
-    .where("title", "in", searchQuery);
-  // get the data
-  const querySnapshot = await 
-
+    .where("title", "in", searchQuery)
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        console.log(doc.data());
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 
   return (
     <div>
