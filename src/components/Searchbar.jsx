@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useTheme } from "../hooks/useTheme";
+import wordCap from "../utils/wordCap";
 import "./Searchbar.css";
 
 export default function Searchbar() {
@@ -10,8 +11,7 @@ export default function Searchbar() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    history.push(`/search?q=${searchTerm}`);
+    history.push(`/search?q=${wordCap(searchTerm)}`);
   };
 
   return (
